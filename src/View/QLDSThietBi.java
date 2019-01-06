@@ -105,9 +105,19 @@ public void hienThiTB(){
 
         jComboBoxXuatXu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jComboBoxXuatXu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nội Địa", "Ngoại Địa" }));
+        jComboBoxXuatXu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxXuatXuActionPerformed(evt);
+            }
+        });
 
         jComboBoxNamSX.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jComboBoxNamSX.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018" }));
+        jComboBoxNamSX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxNamSXActionPerformed(evt);
+            }
+        });
 
         jButton1.setForeground(new java.awt.Color(0, 102, 51));
         jButton1.setText("Thêm");
@@ -291,6 +301,7 @@ public Boolean kiemTraTrung(int ma){
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //nut them
         int ma=1000;
         if(jTextFieldTenTB.getText().toString().length()!=0){
             while (true) {                
@@ -323,6 +334,7 @@ public Boolean kiemTraTrung(int ma){
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        //nut sua
         int r=jTable1.getSelectedRow();
         if(r!=-1){
             jTextFieldTenTB.setText(table.getValueAt(r, 1).toString());
@@ -335,6 +347,7 @@ public Boolean kiemTraTrung(int ma){
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        //nut luu
        if(jTextFieldTenTB.getText().toString().length()>0){
            int r=jTable1.getSelectedRow();
            TB tb=new TB();
@@ -357,6 +370,7 @@ public Boolean kiemTraTrung(int ma){
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        //nut xoa
         int r=jTable1.getSelectedRow();
         if(r!=-1){
             table.removeRow(r);
@@ -369,10 +383,19 @@ public Boolean kiemTraTrung(int ma){
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        //nut huy
         jTextFieldTenTB.setText("");
         jComboBoxNamSX.setSelectedIndex(0);
         jComboBoxXuatXu.setSelectedIndex(0);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jComboBoxNamSXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxNamSXActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxNamSXActionPerformed
+
+    private void jComboBoxXuatXuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxXuatXuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxXuatXuActionPerformed
 
     /**
      * @param args the command line arguments
